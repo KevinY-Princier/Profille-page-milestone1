@@ -9,110 +9,74 @@
       "burgerId": "classic-beef",
       "stepIndex": 1,
       "type": "multiple-choice",
-      "instruction": "Choose your bun",
+      "instruction": "Choose a bun",
       "typeLabel": "Bun",
       "stateKey": "bun",
       "multipleSelect": false,
       "options": [
-        {
-          "id": "sesame-bun",
-          "label": "Sesame Bun",
-          "subLabel": "Toasty & classic"
-        },
-        {
-          "id": "brioche-bun",
-          "label": "Sweet Brioche",
-          "subLabel": "Soft and buttery"
-        },
-        {
-          "id": "lettuce-wrap",
-          "label": "Lettuce Wrap",
-          "subLabel": "Fresh & light"
-        }
+        { "id": "sesame", "label": "Sesame" },
+        { "id": "brioche", "label": "Brioche" },
+        { "id": "lettuce", "label": "Lettuce wrap" }
       ],
-      "confirmationMessage": "Nice bun choice!",
-      "skipConfirmationMessage": "No bun drama."
+      "confirmationMessage": "Nice!"
     },
     {
       "id": "classic-beef-step-2-protein",
       "burgerId": "classic-beef",
       "stepIndex": 2,
       "type": "multiple-choice",
-      "instruction": "Pick your protein",
+      "instruction": "Pick a protein",
+      "typeLabel": "Protein",
       "stateKey": "protein",
       "multipleSelect": false,
       "options": [
-        {
-          "id": "beef-patty",
-          "label": "Beef Patty",
-          "subLabel": "Juicy & savory"
-        },
-        {
-          "id": "chicken-breast",
-          "label": "Grilled Chicken",
-          "subLabel": "Smoky grill flavor"
-        },
-        {
-          "id": "plant-based",
-          "label": "Plant-Based",
-          "subLabel": "Bold and hearty"
-        }
+        { "id": "beef", "label": "Beef" },
+        { "id": "chicken", "label": "Chicken" },
+        { "id": "plant", "label": "Plant-based" }
       ],
-      "confirmationMessage": "Great protein pick!",
-      "skipConfirmationMessage": "Protein skipped."
+      "confirmationMessage": "Great!"
     },
     {
       "id": "classic-beef-step-3-toppings",
       "burgerId": "classic-beef",
       "stepIndex": 3,
       "type": "multiple-choice",
-      "instruction": "Add toppings (choose at least 1)",
+      "instruction": "Choose toppings (pick 1+)",
+      "typeLabel": "Toppings",
       "stateKey": "toppings",
       "multipleSelect": true,
       "minSelections": 1,
-      "validationMessage": "Pick at least one topping.",
       "options": [
         { "id": "lettuce", "label": "Lettuce" },
         { "id": "tomato", "label": "Tomato" },
         { "id": "pickles", "label": "Pickles" },
-        { "id": "onions", "label": "Onions" },
-        { "id": "jalapenos", "label": "Jalapenos", "subLabel": "Optional heat" }
+        { "id": "onion", "label": "Onion" }
       ],
-      "confirmationMessage": "Extra tasty!",
-      "skipConfirmationMessage": "Toppings skipped."
+      "confirmationMessage": "Yum!"
     },
     {
       "id": "classic-beef-step-4-sauce-type",
       "burgerId": "classic-beef",
       "stepIndex": 4,
       "type": "multiple-choice",
-      "instruction": "Choose your sauce",
+      "instruction": "Choose a sauce",
+      "typeLabel": "Sauce",
       "stateKey": "sauceType",
       "multipleSelect": false,
       "options": [
         { "id": "ketchup", "label": "Ketchup" },
         { "id": "mayo", "label": "Mayo" },
-        {
-          "id": "spicy-chipotle",
-          "label": "Spicy Chipotle",
-          "subLabel": "Smoky heat"
-        },
-        {
-          "id": "garlic-aioli",
-          "label": "Garlic Aioli",
-          "subLabel": "Creamy garlic"
-        }
+        { "id": "chipotle", "label": "Spicy chipotle" }
       ],
-      "confirmationMessage": "Awesome sauce!",
-      "skipConfirmationMessage": "Sauce skipped.",
+      "confirmationMessage": "Nice!",
       "feedback": {
         "condition": {
           "all": [
-            { "field": "bun.id", "equals": "brioche-bun" },
-            { "field": "sauceType.id", "equals": "spicy-chipotle" }
+            { "field": "bun.id", "equals": "brioche" },
+            { "field": "sauceType.id", "equals": "chipotle" }
           ]
         },
-        "message": "Nice fire, but Sweet Brioche can clash with spicy chipotle. Want a smoother bite?",
+        "message": "Sweet brioche + spicy chipotle can clash.",
         "buttonText": "Got it"
       }
     },
@@ -121,65 +85,47 @@
       "burgerId": "classic-beef",
       "stepIndex": 5,
       "type": "text",
-      "instruction": "Dial in the sauce intensity",
-      "inputLabel": "How many sauce servings?",
+      "instruction": "Sauce servings",
+      "typeLabel": "Sauce amount",
+      "inputLabel": "How many servings?",
       "stateKey": "sauceServings",
       "min": 0,
       "max": 6,
       "step": 1,
       "placeholder": "0-6",
-      "validationMessage": "Enter a number from 0 to 6.",
-      "confirmationMessage": "Extra tasty!",
-      "skipConfirmationMessage": "Sauce intensity skipped."
+      "confirmationMessage": "Nice!"
     },
     {
       "id": "classic-beef-step-6-extras",
       "burgerId": "classic-beef",
       "stepIndex": 6,
       "type": "multiple-choice",
-      "instruction": "Pick your extras (choose at least 1)",
+      "instruction": "Choose extras (pick 1+)",
+      "typeLabel": "Extras",
       "stateKey": "extras",
       "multipleSelect": true,
       "minSelections": 1,
-      "validationMessage": "Pick at least one extra.",
       "options": [
-        { "id": "cheese", "label": "Extra Cheese" },
-        { "id": "bacon", "label": "Crispy Bacon" },
-        {
-          "id": "double-patty",
-          "label": "Double Patty",
-          "subLabel": "More beefy goodness"
-        }
+        { "id": "cheese", "label": "Cheese" },
+        { "id": "bacon", "label": "Bacon" },
+        { "id": "double", "label": "Double patty" }
       ],
-      "confirmationMessage": "Extra tasty!",
-      "skipConfirmationMessage": "Extras skipped."
+      "confirmationMessage": "Great!"
     },
     {
       "id": "classic-beef-step-7-presentation",
       "burgerId": "classic-beef",
       "stepIndex": 7,
       "type": "image-selection",
-      "instruction": "Choose your burger presentation",
+      "instruction": "Choose a style",
+      "typeLabel": "Style",
       "stateKey": "presentation",
       "imageOptions": [
-        {
-          "id": "classic-tray",
-          "label": "Classic Tray",
-          "url": "https://placehold.co/600x360/1f2937/ffffff?text=Classic+Tray"
-        },
-        {
-          "id": "chef-box",
-          "label": "Chef's Box",
-          "url": "https://placehold.co/600x360/111827/ffffff?text=Chef%27s+Box"
-        },
-        {
-          "id": "to-go-wrapped",
-          "label": "To-Go Wrapped",
-          "url": "https://placehold.co/600x360/0f172a/ffffff?text=To-Go+Wrapped"
-        }
+        { "id": "tray", "label": "Tray" },
+        { "id": "box", "label": "Box" },
+        { "id": "wrap", "label": "Wrapped" }
       ],
-      "confirmationMessage": "Nice pick!",
-      "skipConfirmationMessage": "Presentation skipped."
+      "confirmationMessage": "Nice!"
     },
 
     {
@@ -187,97 +133,74 @@
       "burgerId": "grilled-chicken",
       "stepIndex": 1,
       "type": "multiple-choice",
-      "instruction": "Choose your bun",
+      "instruction": "Choose a bun",
+      "typeLabel": "Bun",
       "stateKey": "bun",
       "multipleSelect": false,
       "options": [
-        { "id": "sesame-bun", "label": "Sesame Bun" },
-        { "id": "brioche-bun", "label": "Sweet Brioche" },
-        { "id": "lettuce-wrap", "label": "Lettuce Wrap" }
+        { "id": "sesame", "label": "Sesame" },
+        { "id": "brioche", "label": "Brioche" },
+        { "id": "lettuce", "label": "Lettuce wrap" }
       ],
-      "confirmationMessage": "Great bun choice!",
-      "skipConfirmationMessage": "Bun skipped."
+      "confirmationMessage": "Nice!"
     },
     {
       "id": "grilled-chicken-step-2-protein",
       "burgerId": "grilled-chicken",
       "stepIndex": 2,
       "type": "multiple-choice",
-      "instruction": "Pick your protein",
+      "instruction": "Pick a protein",
+      "typeLabel": "Protein",
       "stateKey": "protein",
       "multipleSelect": false,
       "options": [
-        {
-          "id": "chicken-breast",
-          "label": "Grilled Chicken",
-          "subLabel": "Juicy and smoky"
-        },
-        {
-          "id": "beef-patty",
-          "label": "Beef Patty",
-          "subLabel": "Extra hearty"
-        },
-        {
-          "id": "plant-based",
-          "label": "Plant-Based",
-          "subLabel": "Plant-powered bite"
-        }
+        { "id": "chicken", "label": "Chicken" },
+        { "id": "beef", "label": "Beef" },
+        { "id": "plant", "label": "Plant-based" }
       ],
-      "confirmationMessage": "Good choice!",
-      "skipConfirmationMessage": "Protein skipped."
+      "confirmationMessage": "Great!"
     },
     {
       "id": "grilled-chicken-step-3-toppings",
       "burgerId": "grilled-chicken",
       "stepIndex": 3,
       "type": "multiple-choice",
-      "instruction": "Add toppings (choose at least 1)",
+      "instruction": "Choose toppings (pick 1+)",
+      "typeLabel": "Toppings",
       "stateKey": "toppings",
       "multipleSelect": true,
       "minSelections": 1,
-      "validationMessage": "Pick at least one topping.",
       "options": [
         { "id": "lettuce", "label": "Lettuce" },
         { "id": "tomato", "label": "Tomato" },
-        { "id": "onions", "label": "Onions" },
-        {
-          "id": "jalapenos",
-          "label": "Jalapenos",
-          "subLabel": "Optional heat"
-        },
+        { "id": "onion", "label": "Onion" },
         { "id": "pickles", "label": "Pickles" }
       ],
-      "confirmationMessage": "Nice crunch!",
-      "skipConfirmationMessage": "Toppings skipped."
+      "confirmationMessage": "Yum!"
     },
     {
       "id": "grilled-chicken-step-4-sauce-type",
       "burgerId": "grilled-chicken",
       "stepIndex": 4,
       "type": "multiple-choice",
-      "instruction": "Choose your sauce",
+      "instruction": "Choose a sauce",
+      "typeLabel": "Sauce",
       "stateKey": "sauceType",
       "multipleSelect": false,
       "options": [
-        { "id": "honey-mustard", "label": "Honey Mustard" },
-        { "id": "smoky-bbq", "label": "Smoky BBQ", "subLabel": "Sweet smoke" },
-        {
-          "id": "spicy-chipotle",
-          "label": "Spicy Chipotle",
-          "subLabel": "Smoky heat"
-        },
-        { "id": "ranch", "label": "Ranch" }
+        { "id": "mustard", "label": "Honey mustard" },
+        { "id": "bbq", "label": "BBQ" },
+        { "id": "chipotle", "label": "Spicy chipotle" }
       ],
-      "confirmationMessage": "Awesome sauce!",
-      "skipConfirmationMessage": "Sauce skipped.",
+      "confirmationMessage": "Nice!",
       "feedback": {
         "condition": {
           "all": [
-            { "field": "bun.id", "equals": "lettuce-wrap" },
-            { "field": "sauceType.id", "equals": "smoky-bbq" }
+            { "field": "bun.id", "equals": "lettuce" },
+            { "field": "sauceType.id", "equals": "bbq" }
           ]
         },
-        "message": "Smoky BBQ + lettuce wrap is bold. Want to keep it lighter with honey mustard or ranch?",
+        "message": "BBQ + lettuce wrap is bold.",
         "buttonText": "Got it"
       }
     },
@@ -286,61 +209,47 @@
       "burgerId": "grilled-chicken",
       "stepIndex": 5,
       "type": "text",
-      "instruction": "Dial in the sauce intensity",
-      "inputLabel": "How many sauce servings?",
+      "instruction": "Sauce servings",
+      "typeLabel": "Sauce amount",
+      "inputLabel": "How many servings?",
       "stateKey": "sauceServings",
       "min": 0,
       "max": 6,
       "step": 1,
       "placeholder": "0-6",
-      "validationMessage": "Enter a number from 0 to 6.",
-      "confirmationMessage": "Extra tasty!",
-      "skipConfirmationMessage": "Sauce intensity skipped."
+      "confirmationMessage": "Nice!"
     },
     {
       "id": "grilled-chicken-step-6-extras",
       "burgerId": "grilled-chicken",
       "stepIndex": 6,
       "type": "multiple-choice",
-      "instruction": "Pick your extras (choose at least 1)",
+      "instruction": "Choose extras (pick 1+)",
+      "typeLabel": "Extras",
       "stateKey": "extras",
       "multipleSelect": true,
       "minSelections": 1,
-      "validationMessage": "Pick at least one extra.",
       "options": [
-        { "id": "cheese", "label": "Extra Cheese" },
-        { "id": "bacon", "label": "Crispy Bacon" },
-        { "id": "avocado", "label": "Avocado" }
+        { "id": "cheese", "label": "Cheese" },
+        { "id": "bacon", "label": "Bacon" },
+        { "id": "avo", "label": "Avocado" }
       ],
-      "confirmationMessage": "Extra tasty!",
-      "skipConfirmationMessage": "Extras skipped."
+      "confirmationMessage": "Great!"
     },
     {
       "id": "grilled-chicken-step-7-presentation",
       "burgerId": "grilled-chicken",
       "stepIndex": 7,
       "type": "image-selection",
-      "instruction": "Choose your burger presentation",
+      "instruction": "Choose a style",
+      "typeLabel": "Style",
       "stateKey": "presentation",
       "imageOptions": [
-        {
-          "id": "classic-tray",
-          "label": "Classic Tray",
-          "url": "https://placehold.co/600x360/111827/ffffff?text=Classic+Tray"
-        },
-        {
-          "id": "chef-box",
-          "label": "Chef's Box",
-          "url": "https://placehold.co/600x360/0f172a/ffffff?text=Chef%27s+Box"
-        },
-        {
-          "id": "to-go-wrapped",
-          "label": "To-Go Wrapped",
-          "url": "https://placehold.co/600x360/1b2a41/ffffff?text=To-Go+Wrapped"
-        }
+        { "id": "tray", "label": "Tray" },
+        { "id": "box", "label": "Box" },
+        { "id": "wrap", "label": "Wrapped" }
       ],
-      "confirmationMessage": "Nice pick!",
-      "skipConfirmationMessage": "Presentation skipped."
+      "confirmationMessage": "Nice!"
     }
   ]
 }
